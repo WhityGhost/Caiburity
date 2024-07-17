@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { service } from "@/src/types/main";
 import lottie from "lottie-web";
-import { MovingBorderButton } from "../button/MovingBorderButton";
-import GradientText from "../text/GradientText";
+import { MovingBorderButton } from "../../BaseComponents/Button/MovingBorderButton";
+import GradientText from "../../BaseComponents/Text/GradientText";
 
 interface Props {
   service: service;

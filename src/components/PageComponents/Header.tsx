@@ -6,6 +6,16 @@ import { Link as ScrollLink } from "react-scroll";
 import { FiSun, FiMoon } from "react-icons/fi";
 import { FaNodeJs } from "react-icons/fa";
 import { CgClose, CgMenuRight } from "react-icons/cg";
+import { motion } from "framer-motion";
+
+const headerVariants = {
+  hidden: { opacity: 0, y: -30 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { ease: "easeInOut", duration: 0.8 },
+  },
+};
 
 export default function Header({ logo }: { logo: string }) {
   const [navCollapse, setNavCollapse] = useState(true);
@@ -22,7 +32,10 @@ export default function Header({ logo }: { logo: string }) {
   const navs = ["home", "about", "projects", "experience", "contact"];
 
   return (
-    <header
+    <motion.header
+      variants={headerVariants}
+      initial="hidden"
+      animate="visible"
       className={`backdrop-filter backdrop-blur-lg ${
         scroll ? "border-b bg-white bg-opacity-40" : "border-b-0"
       } dark:bg-grey-900 dark:bg-opacity-40 border-gray-200 dark:border-b-0 z-30 min-w-full flex flex-col fixed`}
@@ -120,6 +133,6 @@ export default function Header({ logo }: { logo: string }) {
           </ScrollLink>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

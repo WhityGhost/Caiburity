@@ -1,18 +1,15 @@
-"use client";
-
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import { useTheme } from "next-themes";
 import { Link as ScrollLink } from "react-scroll";
 import { IoIosArrowForward } from "react-icons/io";
 import lottie from "lottie-web";
 
 import lt_tfa from "@/src/assets/lottie/TFA.json";
 import { main } from "@/src/types/main";
-import WavyText from "../text/WavyText";
-import Count from "../count/Count";
-import GradientText from "../text/GradientText";
-import GradientButton from "../button/GradientButton";
+import WavyText from "../../BaseComponents/Text/WavyText";
+import Count from "../../BaseComponents/Count/Count";
+import GradientText from "../../BaseComponents/Text/GradientText";
+import GradientButton from "../../BaseComponents/Button/GradientButton";
 import HeroBg from "@/src/assets/img/herobg.jpg";
 import authenticationIco from "@/src/assets/img/icon/authentication.png";
 import firewallIco from "@/src/assets/img/icon/firewall.png";
@@ -20,6 +17,8 @@ import hackingIco from "@/src/assets/img/icon/hacking.png";
 import passwordIco from "@/src/assets/img/icon/password.png";
 import phishingIco from "@/src/assets/img/icon/phishing.png";
 import virusIco from "@/src/assets/img/icon/virus.png";
+import TechIco from "./TechIco";
+import SectionWrapper from "../SectionWrapper";
 
 interface HeroProps {
   mainData: main;
@@ -49,8 +48,8 @@ const Hero = ({ mainData }: HeroProps) => {
       <div className="absolute w-full h-full -z-10">
         <div className="absolute w-full h-full bg-gradient-to-b from-transparent from-80% to-white dark:to-gray-900 -z-10"></div>
         <Image
-          alt="profile"
           loading={"lazy"}
+          alt="profile"
           className="object-cover -z-20"
           src={HeroBg}
           layout="fill"
@@ -59,33 +58,39 @@ const Hero = ({ mainData }: HeroProps) => {
       </div>
       <div className="py-16 lg:pt-48 lg:pb-24 flex flex-col-reverse lg:flex-row justify-around gap-10 lg:gap-0">
         <div className="flex flex-col gap-4 md:gap-6 text-left lg:w-1/2 2xl:w-1/3 mx-4 md:mx-6 xl:mx-0">
-          <GradientText
-            className="text-4xl md:text-6xl font-bold relative mb-20"
-            as="h1"
-          >
-            {title}
-          </GradientText>
+          <SectionWrapper as="div">
+            <GradientText
+              className="text-4xl md:text-6xl font-bold relative mb-20"
+              as="h1"
+            >
+              {title}
+            </GradientText>
+          </SectionWrapper>
           <div className="flex flex-row items-start md:items-center gap-1.5 mb-2">
             <div className="text-xl font-semibold">
-              <WavyText text={bio} replay={true} />
+              <WavyText text={bio} />
             </div>
           </div>
-          <GradientText className="text-base" as="p">
-            {shortDesc}
-          </GradientText>
-          <GradientButton
-            as={ScrollLink}
-            props={{
-              to: "about",
-              offset: -60,
-              smooth: true,
-              duration: 500,
-              isDynamic: true,
-            }}
-          >
-            Discover More
-            <IoIosArrowForward className="group-hover:translate-x-1 transition-transform ml-2" />
-          </GradientButton>
+          <SectionWrapper as="div" delay={0.4}>
+            <GradientText className="text-base" as="p">
+              {shortDesc}
+            </GradientText>
+          </SectionWrapper>
+          <SectionWrapper as="div" delay={0.8}>
+            <GradientButton
+              as={ScrollLink}
+              props={{
+                to: "about",
+                offset: -60,
+                smooth: true,
+                duration: 500,
+                isDynamic: true,
+              }}
+            >
+              Discover More
+              <IoIosArrowForward className="group-hover:translate-x-1 transition-transform ml-2" />
+            </GradientButton>
+          </SectionWrapper>
         </div>
 
         <div className="relative mx-auto lg:mx-0 mt-12 md:mt-16 lg:mt-0">
@@ -93,60 +98,30 @@ const Hero = ({ mainData }: HeroProps) => {
             className="w-56 h-56 md:w-80 md:h-80 lg:-translate-x-16"
             ref={lt_tfa_container}
           ></div>
-          <div className="absolute grid -top-6 -left-12 lg:-top-14 lg:-left-32 w-16 h-16 md:w-20 md:h-20 bg-white dark:bg-grey-800 rounded-full place-items-center shadow-sm hover:shadow-lg transition-shadow">
-            <Image
-              alt="tech-stack"
-              className="h-8 w-8 md:h-10 md:w-10 object-cover"
-              src={authenticationIco}
-              width={100}
-              height={100}
-            />
-          </div>
-          <div className="absolute grid top-12 md:top-16 md:-left-20 -left-16 lg:top-10 lg:-left-40 w-12 h-12 md:w-16 md:h-16 bg-white dark:bg-grey-800 rounded-full place-items-center shadow-sm hover:shadow-lg transition-shadow">
-            <Image
-              alt="tech-stack"
-              className="h-8 w-8 md:h-10 md:w-10 object-cover"
-              src={firewallIco}
-              width={100}
-              height={100}
-            />
-          </div>
-          <div className="absolute grid top-36 md:top-56 md:-left-12 -left-10 lg:top-56 lg:-left-32 w-12 h-12 md:w-16 md:h-16 bg-white dark:bg-grey-800 rounded-full place-items-center shadow-sm hover:shadow-lg transition-shadow">
-            <Image
-              alt="tech-stack"
-              className="h-8 w-8 md:h-10 md:w-10 object-cover"
-              src={passwordIco}
-              width={100}
-              height={100}
-            />
-          </div>
-          <div className="absolute grid top-0 -right-12 lg:-right-4 w-14 h-14 bg-white dark:bg-grey-800 rounded-full place-items-center shadow-sm hover:shadow-lg transition-shadow">
-            <Image
-              alt="tech-stack"
-              className="h-8 w-8 md:h-10 md:w-10 object-cover"
-              src={virusIco}
-              width={100}
-              height={100}
-            />
-          </div>
-          <div className="absolute grid bottom-[4rem] md:bottom-24 -right-20 lg:bottom-[8.5rem] lg:-right-12 w-16 h-16 md:w-20 md:h-20 bg-white dark:bg-grey-800 rounded-full place-items-center shadow-sm hover:shadow-lg transition-shadow">
-            <Image
-              alt="tech-stack"
-              className="h-10 w-10 md:h-12 md:w-12 object-cover"
-              src={hackingIco}
-              width={100}
-              height={100}
-            />
-          </div>
-          <div className="absolute grid -bottom-10 -right-8 lg:-bottom-0 lg:right-6 w-14 md:w-16 h-14 md:h-16 bg-white dark:bg-grey-800 rounded-full place-items-center shadow-sm hover:shadow-lg transition-shadow">
-            <Image
-              alt="tech-stack"
-              className="h-10 w-10 object-cover"
-              src={phishingIco}
-              width={100}
-              height={100}
-            />
-          </div>
+          <TechIco
+            className="absolute grid -top-6 -left-12 lg:-top-14 lg:-left-32 w-16 h-16 md:w-20 md:h-20 bg-white dark:bg-grey-800 rounded-full place-items-center shadow-sm hover:shadow-lg transition-shadow"
+            image={authenticationIco}
+          />
+          <TechIco
+            className="absolute grid top-12 md:top-16 md:-left-20 -left-16 lg:top-10 lg:-left-40 w-12 h-12 md:w-16 md:h-16 bg-white dark:bg-grey-800 rounded-full place-items-center shadow-sm hover:shadow-lg transition-shadow"
+            image={firewallIco}
+          />
+          <TechIco
+            className="absolute grid top-36 md:top-56 md:-left-12 -left-10 lg:top-56 lg:-left-32 w-12 h-12 md:w-16 md:h-16 bg-white dark:bg-grey-800 rounded-full place-items-center shadow-sm hover:shadow-lg transition-shadow"
+            image={passwordIco}
+          />
+          <TechIco
+            className="absolute grid top-0 -right-12 lg:-right-4 w-14 h-14 bg-white dark:bg-grey-800 rounded-full place-items-center shadow-sm hover:shadow-lg transition-shadow"
+            image={virusIco}
+          />
+          <TechIco
+            className="absolute grid bottom-[4rem] md:bottom-24 -right-20 lg:bottom-[8.5rem] lg:-right-12 w-16 h-16 md:w-20 md:h-20 bg-white dark:bg-grey-800 rounded-full place-items-center shadow-sm hover:shadow-lg transition-shadow"
+            image={hackingIco}
+          />
+          <TechIco
+            className="absolute grid -bottom-10 -right-8 lg:-bottom-0 lg:right-6 w-14 md:w-16 h-14 md:h-16 bg-white dark:bg-grey-800 rounded-full place-items-center shadow-sm hover:shadow-lg transition-shadow"
+            image={phishingIco}
+          />
         </div>
       </div>
       <svg
@@ -174,7 +149,10 @@ const Hero = ({ mainData }: HeroProps) => {
           </linearGradient>
         </defs>
       </svg>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-3/4 mx-auto lg:pl-48">
+      <SectionWrapper
+        as="div"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-3/4 mx-auto lg:pl-48"
+      >
         {mainData.statistic.map((item, i) => (
           <div key={i} className="rounded-lg text-center">
             <div className="mb-24">
@@ -190,7 +168,7 @@ const Hero = ({ mainData }: HeroProps) => {
             </div>
           </div>
         ))}
-      </div>
+      </SectionWrapper>
     </section>
   );
 };

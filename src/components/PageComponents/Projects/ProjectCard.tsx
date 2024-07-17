@@ -32,6 +32,7 @@ const Project = ({ name, image, category, techstack, links }: project) => {
       <div className="relative group rounded-lg bg-cyan-50">
         <Image
           alt={name}
+          loading={"lazy"}
           width={1000}
           height={1000}
           className="max-w-full h-48 max-h-full object-cover object-top rounded-lg"

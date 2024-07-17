@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
-import SectionWrapper from "../SectionWrapper";
+import SectionWrapper from "./SectionWrapper";
 import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import contactImg from "@/src/assets/img/contact.jpg";
-import GradientButton from "../button/GradientButton";
+import GradientButton from "../BaseComponents/Button/GradientButton";
 
 const Contact = () => {
   const [values, setValues] = useState({
@@ -68,12 +68,13 @@ const Contact = () => {
         <div className="flex-1 px-12">
           <Image
             unoptimized={true}
+            loading={"lazy"}
             quality={100}
             alt="contact"
             src={contactImg}
             className="hidden md:block h-full object-cover rounded-3xl row-span-2"
-            width={1000}
-            height={1000}
+            width={800}
+            height={600}
           />
         </div>
         <div className="flex-1">

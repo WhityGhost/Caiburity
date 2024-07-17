@@ -1,6 +1,6 @@
 import { education, experience } from "@/src/types/main";
 import { useState } from "react";
-import { ViewAll } from "../projects/Projects";
+import { ViewAll } from "../Projects/Projects";
 import SectionWrapper from "../SectionWrapper";
 import ExperienceCard from "./ExperienceCard";
 

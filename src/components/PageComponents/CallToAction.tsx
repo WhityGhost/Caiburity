@@ -1,11 +1,11 @@
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import SectionWrapper from "./SectionWrapper";
-import GradientText from "./text/GradientText";
-import GradientButton from "./button/GradientButton";
+import GradientText from "../BaseComponents/Text/GradientText";
+import GradientButton from "../BaseComponents/Button/GradientButton";
 import CallImg from "@/src/assets/img/secured-access-accessibility-analysising-browsing-concept.jpg";
-import { callToAction } from "../types/main";
-import Count from "./count/Count";
+import { callToAction } from "../../types/main";
+import Count from "../BaseComponents/Count/Count";
 
 interface Props {
   callToActionData: callToAction;
@@ -37,6 +37,7 @@ const CallToAction = ({ callToActionData }: Props) => {
       <div className="w-full md:w-1/2 lg:w-96 mb-4 md:mb-0 mx-auto rounded-lg">
         <Image
           alt="Fork this template on Github"
+          loading={"lazy"}
           quality={100}
           width={1000}
           height={1000}

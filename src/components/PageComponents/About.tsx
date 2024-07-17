@@ -1,18 +1,17 @@
 import Image from "next/image";
 import { about } from "@/src/types/main";
 import Link from "next/link";
-import SectionWrapper from "../SectionWrapper";
+import SectionWrapper from "./SectionWrapper";
 import { BsShieldFillCheck } from "react-icons/bs";
-import GradientButton from "../button/GradientButton";
-import GradientText from "../text/GradientText";
+import GradientButton from "../BaseComponents/Button/GradientButton";
+import GradientText from "../BaseComponents/Text/GradientText";
 import aboutImage from "@/src/assets/img/about.jpg";
 
 interface Props {
   aboutData: about;
-  name: string;
 }
 
-const About = ({ aboutData, name }: Props) => {
+const About = ({ aboutData }: Props) => {
   const { titles, about, features } = aboutData;
 
   return (
@@ -24,8 +23,8 @@ const About = ({ aboutData, name }: Props) => {
           <Image
             alt="profile"
             loading={"lazy"}
-            height={1400}
-            width={1400}
+            height={600}
+            width={600}
             className="w-full h-60 md:h-80 object-cover grayscale hover:grayscale-0 transition-all bg-cyan-100 duration-500"
             src={aboutImage}
           />

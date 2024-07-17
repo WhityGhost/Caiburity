@@ -5,13 +5,7 @@ import Link from "next/link";
 import React from "react";
 import * as Fa from "react-icons/fa";
 
-export default function Footer({
-  socials,
-  name,
-}: {
-  socials: social[];
-  name: string;
-}) {
+export default function Footer({ socials }: { socials: social[] }) {
   const { theme } = useTheme();
 
   return (
@@ -28,9 +22,9 @@ export default function Footer({
               width={45}
               height={45}
               src="/nextjs.svg"
-              className={`${
-                theme === "dark" ? "invert" : "invert-0"
-              } opacity-80 hover:opacity-100 transition-opacity`}
+              className={
+                "invert-0 dark:invert opacity-80 hover:opacity-100 transition-opacity"
+              }
             />
           </Link>
           <p className="text-sm">X</p>
@@ -40,9 +34,9 @@ export default function Footer({
               width={52}
               height={52}
               src="/vercel.svg"
-              className={`${
-                theme === "dark" ? "invert" : "invert-0"
-              } opacity-80 hover:opacity-100 transition-opacity`}
+              className={
+                "invert-0 dark:invert opacity-80 hover:opacity-100 transition-opacity"
+              }
             />
           </Link>
         </div>

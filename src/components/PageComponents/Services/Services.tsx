@@ -2,7 +2,7 @@ import { useState } from "react";
 import { services } from "@/src/types/main";
 import ServiceCard from "./ServiceCard";
 import SectionWrapper from "../SectionWrapper";
-import GradientButton from "../button/GradientButton";
+import GradientButton from "../../BaseComponents/Button/GradientButton";
 
 interface Props {
   serviceData: services;

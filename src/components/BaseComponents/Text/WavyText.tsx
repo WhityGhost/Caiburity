@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { motion, Variants, HTMLMotionProps } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 interface WavyTextProps extends HTMLMotionProps<"div"> {
   text: string;
   delay?: number;
-  replay: boolean;
   duration?: number;
 }
 
@@ -12,10 +12,14 @@ const WavyText: FC<WavyTextProps> = ({
   text,
   delay = 0,
   duration = 0.05,
-  replay,
   ...props
 }: WavyTextProps) => {
   const letters = Array.from(text);
+
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
 
   const container: Variants = {
     hidden: {
@@ -50,10 +54,11 @@ const WavyText: FC<WavyTextProps> = ({
 
   return (
     <motion.h1
+      ref={ref}
       style={{ display: "flex", overflow: "hidden" }}
       variants={container}
       initial="hidden"
-      animate={replay ? "visible" : "hidden"}
+      animate={inView ? "visible" : "hidden"}
       {...props}
     >
       {letters.map((letter, index) => (
