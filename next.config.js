@@ -11,6 +11,7 @@ const nextConfig = {
       "media.geeksforgeeks.org",
     ],
   },
+  reactStrictMode: false,
 };
 
 module.exports = nextConfig;

@@ -1,6 +1,7 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import { service } from "@/src/types/main";
-import { useTheme } from "next-themes";
 import lottie from "lottie-web";
 import { MovingBorderButton } from "../button/MovingBorderButton";
 import GradientText from "../text/GradientText";
@@ -14,8 +15,7 @@ const Service = ({ service }: Props) => {
 
   useEffect(() => {
     if (service.lottieImg) {
-      let animLoaded = false;
-      if (lt_container.current && !animLoaded) {
+      if (lt_container.current) {
         lottie.loadAnimation({
           container: lt_container.current,
           renderer: "svg",
@@ -23,7 +23,6 @@ const Service = ({ service }: Props) => {
           autoplay: true,
           animationData: require(`@/src/assets/lottie/${service.lottieImg}.json`),
         });
-        animLoaded = true;
       }
     }
   }, []);

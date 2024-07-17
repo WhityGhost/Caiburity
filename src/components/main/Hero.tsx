@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
@@ -27,8 +29,7 @@ const Hero = ({ mainData }: HeroProps) => {
   const lt_tfa_container = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    let animLoaded = false;
-    if (lt_tfa_container.current && !animLoaded) {
+    if (lt_tfa_container.current) {
       lottie.loadAnimation({
         container: lt_tfa_container.current,
         renderer: "svg",
@@ -36,7 +37,6 @@ const Hero = ({ mainData }: HeroProps) => {
         autoplay: true,
         animationData: lt_tfa,
       });
-      animLoaded = true;
     }
   }, []);
   const { theme } = useTheme();
