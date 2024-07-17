@@ -147,7 +147,8 @@
     {
       "institute": "XYZ School | CBSE",
       "degree": "HSC Science",
-      "duration": "2014 - 2016"
+      "duration": "2014 - 2016",
+      "desc": []
     },
     {
       "institute": "XYZ College Of Engineering",
@@ -164,7 +165,7 @@
     {
       "company": "ABC Tech Solutions",
       "position": "Web Developer",
-      "duration": "2020 -2022",
+      "duration": "2020 - 2022",
       "desc": [
         "Assisted with design and development of project.",
         "Worked on building the product from scratch and built multiple dashboards.",

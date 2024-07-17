@@ -66,7 +66,7 @@ type social = {
   link: string;
 };
 
-type data = {
+type allData = {
   main: main;
   about: about;
   services: services;
@@ -89,7 +89,7 @@ type statistic = {
 };
 
 export type {
-  data,
+  allData,
   main,
   about,
   service,
