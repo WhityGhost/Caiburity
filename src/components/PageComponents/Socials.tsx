@@ -27,6 +27,7 @@ const Socials = ({ socials }: { socials: social[] }) => {
                 opacity: 0,
                 x: -50,
                 transition: {
+                  duration: 0.8,
                   type: "spring",
                   damping: 12,
                   stiffness: 200,
@@ -36,7 +37,6 @@ const Socials = ({ socials }: { socials: social[] }) => {
                 x: 0,
                 opacity: 1,
                 transition: {
-                  ease: "easeInOut",
                   duration: 0.8,
                   delay: 0.2 * i,
                   type: "spring",

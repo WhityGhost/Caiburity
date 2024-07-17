@@ -33,7 +33,7 @@ const HomePage = () => {
         <Contact />
         <CallToAction callToActionData={data.callToAction} />
       </div>
-      <Footer socials={data.socials} name={data.main.title} />
+      <Footer socials={data.socials} />
     </div>
   );
 };
