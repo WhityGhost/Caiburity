@@ -1,6 +1,5 @@
 "use client";
 import dynamic from "next/dynamic";
-import { allData } from "@/src/types/main";
 import Hero from "@/src/components/PageComponents/Hero/Hero";
 import About from "@/src/components/PageComponents/About";
 import Services from "@/src/components/PageComponents/Services/Services";

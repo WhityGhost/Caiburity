@@ -37,10 +37,9 @@ const CallToAction = ({ callToActionData }: Props) => {
       <div className="w-full md:w-1/2 lg:w-96 mb-4 md:mb-0 mx-auto rounded-lg">
         <Image
           alt="Fork this template on Github"
-          loading={"lazy"}
           quality={100}
-          width={1000}
-          height={1000}
+          width={200}
+          height={200}
           className="w-full h-full mt-2 object-cover object-top rounded-lg"
           src={CallImg}
         />

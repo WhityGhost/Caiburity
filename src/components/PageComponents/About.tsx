@@ -22,9 +22,8 @@ const About = ({ aboutData }: Props) => {
         <div className="items-center mx-auto lg:mx-16">
           <Image
             alt="profile"
-            loading={"lazy"}
-            height={600}
-            width={600}
+            height={200}
+            width={200}
             className="w-full h-60 md:h-80 object-cover grayscale hover:grayscale-0 transition-all bg-cyan-100 duration-500"
             src={aboutImage}
           />

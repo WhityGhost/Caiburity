@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image, { StaticImageData } from "next/image";
@@ -20,7 +19,11 @@ const TechIco = ({
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 2, ease: "easeInOut" },
+      transition: {
+        duration: 2,
+        ease: "easeInOut",
+        delay: 1.2 * Math.random(),
+      },
     },
   };
 

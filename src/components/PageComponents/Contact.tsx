@@ -67,14 +67,12 @@ const Contact = () => {
       <div className="w-full lg:w-5/6 2xl:w-3/4 mt-10 md:mt-16 mx-auto flex justify-between rounded-xl">
         <div className="flex-1 px-12">
           <Image
-            unoptimized={true}
-            loading={"lazy"}
-            quality={100}
+            quality={25}
             alt="contact"
             src={contactImg}
             className="hidden md:block h-full object-cover rounded-3xl row-span-2"
-            width={800}
-            height={600}
+            width={600}
+            height={200}
           />
         </div>
         <div className="flex-1">
