@@ -1,14 +1,14 @@
 type service = {
   desc: string;
   name: string;
-  lottieImg: string;
-  rowSpan: number;
-  colSpan: number;
+  lottieImg?: string;
+  rowSpan?: number;
+  colSpan?: number;
 };
 
 type services = {
   shortDesc: string;
-  main: [service];
+  main: service[];
 };
 
 type project = {
@@ -42,17 +42,15 @@ type main = {
   title: string;
   bio: string;
   shortDesc: string;
-  statistic: [statistic];
+  statistic: statistic[];
 };
 
 type about = {
-  aboutImage: string;
-  aboutImageCaption: string;
-  titles: [string];
+  titles: string[];
   about: string;
   resumeUrl: string;
   callUrl: string;
-  features: [feature];
+  features: feature[];
 };
 
 type feature = {
@@ -80,7 +78,7 @@ type allData = {
 type callToAction = {
   shortDesc: string;
   desc: string;
-  statistic: [statistic];
+  statistic: statistic[];
 };
 
 type statistic = {

@@ -39,8 +39,6 @@ const Hero = ({ mainData }: HeroProps) => {
       });
     }
   }, []);
-  const { theme } = useTheme();
-  console.log(theme);
   const { title, bio, shortDesc } = mainData;
 
   return (
