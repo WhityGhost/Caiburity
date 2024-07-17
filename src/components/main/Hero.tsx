@@ -25,9 +25,9 @@ interface HeroProps {
 
 const Hero = ({ mainData }: HeroProps) => {
   const lt_tfa_container = useRef<HTMLDivElement | null>(null);
-  let animLoaded = false;
 
   useEffect(() => {
+    let animLoaded = false;
     if (lt_tfa_container.current && !animLoaded) {
       lottie.loadAnimation({
         container: lt_tfa_container.current,

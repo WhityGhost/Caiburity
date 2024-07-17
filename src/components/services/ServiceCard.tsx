@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { FastAverageColor } from "fast-average-color";
 import { service } from "@/src/types/main";
 import { useTheme } from "next-themes";
 import lottie from "lottie-web";
@@ -12,10 +11,10 @@ interface Props {
 
 const Service = ({ service }: Props) => {
   const lt_container = useRef<HTMLDivElement | null>(null);
-  if (service.lottieImg) {
-    let animLoaded = false;
 
-    useEffect(() => {
+  useEffect(() => {
+    if (service.lottieImg) {
+      let animLoaded = false;
       if (lt_container.current && !animLoaded) {
         lottie.loadAnimation({
           container: lt_container.current,
@@ -26,9 +25,8 @@ const Service = ({ service }: Props) => {
         });
         animLoaded = true;
       }
-    }, []);
-  }
-  const { theme } = useTheme();
+    }
+  }, []);
 
   return (
     <MovingBorderButton
