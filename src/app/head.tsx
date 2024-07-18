@@ -4,7 +4,7 @@ export default function Head() {
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta
         name="description"
-        content="I'm Jigar Sable, full-stack developer based in Pune, India. My journey in web development began during my first year of college."
+        content="Landing page for AI-powered cybersecurity company built with Next.js, TypeScript, Tailwind CSS, and Vercel"
       />
       <meta name="keywords" content="caiburity, ai-powered, cybersecurity" />
       <meta property="og:site_name" content="Caiburity Landing Page" />
@@ -14,18 +14,18 @@ export default function Head() {
       />
       <meta
         property="og:description"
-        content="I'm Jigar Sable, full-stack developer based in Pune, India. My journey in web development began during my first year of college."
+        content="Caiburity is an AI-powered cybersecurity company providing comprehensive solutions to protect your network traffic and resources. Built using Next.js and Tailwind CSS, with TypeScript for enhanced code safety, this dynamic landing page highlights our team's expertise and services."
       />
-      <meta property="og:url" content="https://jigarsable.vercel.app" />
+      <meta property="og:url" content="https://caiburity.vercel.app" />
       <meta
         property="og:image"
-        content="https://jigarsable.vercel.app/portfolio-fork.png"
+        content="https://caiburity.vercel.app/landing%20page%20dark%20fork.png"
       />
-      <link rel="canonical" href="https://jigarsable.vercel.app" />
-      <meta name="author" content="Jigar Sable" />
+      <link rel="canonical" href="https://caiburity.vercel.app" />
+      <meta name="author" content="Drevon Kooya" />
       <meta name="language" content="English" />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="https://jigarsable.vercel.app" />
+      <meta name="twitter:site" content="https://caiburity.vercel.app" />
       <meta
         name="application-name"
         content="Caiburity | 2024-Top AI-Powered Cybersecurity Solution"

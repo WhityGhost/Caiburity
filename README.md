@@ -3,10 +3,7 @@
 
 <div align="center">
   ·
-  <i>Landing page for AI-powered cybersecurity company built with Next.js, TypeScript, Tailwind CSS, and Firebase</i>
-  ·
-  <br/>
-  <br/>
+  <i>Landing page for AI-powered cybersecurity company built with Next.js, TypeScript, Tailwind CSS, and Vercel
 
 <p align="center">
     <img src="https://img.shields.io/github/forks/jigar-sable/next-portfolio?style=for-the-badge" />
@@ -27,7 +24,7 @@
 
 ## Introduction 👋
 
-Caiburity is an AI-powered cybersecurity company providing comprehensive solutions to protect your network traffic and resources. Built using Next.js and Tailwind CSS, with TypeScript for enhanced code safety, and Firebase for backend services, this dynamic landing page highlights our team's expertise and services.
+Caiburity is an AI-powered cybersecurity company providing comprehensive solutions to protect your network traffic and resources. Built using Next.js and Tailwind CSS, with TypeScript for enhanced code safety, this dynamic landing page highlights our team's expertise and services.
 
 ## Tech Stack 🛠️
 
@@ -55,7 +52,7 @@ Follow these steps to run the landing page locally.
    npm i
    ```
 
-4. Create a Firebase project and select the web app
+4. Create a Vercel project and select the web app
 5. Create an `.env.local` file in the root directory, and add the following variables:
 
    ```makefile
