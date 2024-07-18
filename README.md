@@ -86,7 +86,7 @@ MAIL_TO=YOUR_MAIL_ID
 
 ## License 📄
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/jigar-sable/next-portfolio/blob/main/LICENSE.md)
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/WhityGhost/Caiburity/blob/main/LICENSE.md)
 
 ## Backlogs ✅
 
