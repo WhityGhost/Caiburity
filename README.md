@@ -6,9 +6,8 @@
   <i>Landing page for AI-powered cybersecurity company built with Next.js, TypeScript, Tailwind CSS, and Vercel
 
 <p align="center">
-    <img src="https://img.shields.io/github/forks/jigar-sable/next-portfolio?style=for-the-badge" />
   <a href="https://caiburity.vercel.app">
-    <img src="https://img.shields.io/static/v1?label=&message=View%20Demo&style=for-the-badge&color=black&logo=vercel" />
+    View Demo
   </a>
 </p>
 
